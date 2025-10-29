@@ -1,0 +1,11 @@
+I2C_LCD1602.LcdInit(39)
+I2C_LCD1602.on()
+I2C_LCD1602.BacklightOn()
+basic.forever(function () {
+    basic.showNumber(pins.digitalReadPin(DigitalPin.P1))
+    pins.servoWritePin(AnalogPin.P3, 180)
+    basic.pause(200)
+    pins.servoWritePin(AnalogPin.P4, 180)
+    basic.pause(200)
+    pins.servoWritePin(AnalogPin.P0, 180)
+})
